@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 홀짝 게임 (다크모드)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container" id="loginScreen">
+        <h2>👋 환영합니다</h2>
+        <p style="color:#aaaaaa; font-size: 14px;">이벤트 참여를 위해 로그인해주세요.</p>
+        
+        <input type="text" id="userId" placeholder="아이디 입력">
+        <input type="password" id="userPw" placeholder="비밀번호 입력">
+        
+        <button class="btn-login" onclick="processLogin()">로그인</button>
+        <div class="more-btn" onclick="showSignupScreen()">계정이 없으신가요? (회원가입)</div>
+    </div>
+
+    <div class="game-container" id="signupScreen" style="display: none;">
+        <h2>📝 회원가입</h2>
+        <p style="color:#aaaaaa; font-size: 14px;">새로운 계정을 만들어보세요!</p>
+        
+        <input type="text" id="newId" placeholder="사용할 아이디">
+        <input type="password" id="newPw" placeholder="비밀번호">
+        <input type="password" id="newPwConfirm" placeholder="비밀번호 확인">
+        
+        <button class="btn-login" style="background-color: #66bb6a;" onclick="processSignup()">가입하기</button>
+        <div class="more-btn" onclick="showLoginScreen()">◀ 로그인 화면으로 돌아가기</div>
+    </div>
+
+    <div id="mainGameScreen" style="display: none; flex-direction: column; gap: 20px; align-items: center; width: 100%;">
+        
+        <div class="game-container">
+            <h2>🏆 명예의 전당</h2>
+            <ul class="rank-list" id="topRankList"></ul>
+            <div id="hiddenRankContainer" style="display: none;">
+                <ul class="rank-list" id="extraRankList"></ul>
+            </div>
+            <div class="more-btn" id="toggleRankBtn" onclick="toggleRanking()">▼ 랭킹 더 보기</div>
+        </div>
+
+        <div class="game-container">
+            <h2>🎲 다크모드 홀짝</h2>
+            <p>환영합니다, <span id="displayUsername" style="color:#ffd700; font-weight:bold;">유저</span>님!</p>
+            <p>현재 포인트: <span id="currentPoints" style="color:#64b5f6; font-weight:bold; font-size:22px;">1000</span> P</p>
+            
+            <input type="number" id="betAmount" placeholder="배팅 금액 입력">
+            <p style="font-size: 12px; color: #aaaaaa;">(최소: 100 P / 최대: 500 P)</p>
+
+            <button id="btnOdd" class="btn-odd" onclick="playGame('홀')">홀!</button>
+            <button id="btnEven" class="btn-even" onclick="playGame('짝')">짝!</button>
+
+            <div id="resultMessage">준비 완료! 배팅을 시작하세요.</div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
