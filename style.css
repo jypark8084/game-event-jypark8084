@@ -1,4 +1,3 @@
-/* 공통 레이아웃 */
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -13,7 +12,6 @@ body {
     box-sizing: border-box;
 }
 
-/* 박스 디자인 */
 .game-container {
     background-color: #1e1e1e; 
     padding: 30px;
@@ -23,7 +21,6 @@ body {
     width: 320px;
 }
 
-/* 랭킹 리스트 스타일 */
 .rank-list { list-style: none; padding: 0; margin: 0; text-align: left; }
 .rank-item {
     display: flex;
@@ -47,7 +44,6 @@ body {
 }
 .more-btn:hover { color: #ffffff; }
 
-/* 입력창 및 버튼 스타일 */
 input {
     width: 80%;
     padding: 10px;
@@ -78,7 +74,6 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .btn-login { background-color: #64b5f6; color: white; width: 85%; margin-top: 15px; font-weight: bold; }
 .btn-login:hover { background-color: #42a5f5; }
 
-/* 기타 효과 */
 #resultMessage {
     margin-top: 20px;
     font-weight: bold;

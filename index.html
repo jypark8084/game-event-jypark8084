@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 홀짝 게임 (다크모드)</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
 </head>
 <body>
 
@@ -39,13 +39,13 @@
             <div id="hiddenRankContainer" style="display: none;">
                 <ul class="rank-list" id="extraRankList"></ul>
             </div>
-            <div class="more-btn" id="toggleRankBtn" onclick="toggleRanking()">▼ 랭킹 더 보기</div>
+            <div class="more-btn" id="toggleRankBtn" onclick="toggleRanking()" style="display: none;">▼ 랭킹 더 보기</div>
         </div>
 
         <div class="game-container">
             <h2>🎲 다크모드 홀짝</h2>
             <p>환영합니다, <span id="displayUsername" style="color:#ffd700; font-weight:bold;">유저</span>님!</p>
-            <p>현재 포인트: <span id="currentPoints" style="color:#64b5f6; font-weight:bold; font-size:22px;">1000</span> P</p>
+            <p>현재 포인트: <span id="currentPoints" style="color:#64b5f6; font-weight:bold; font-size:22px;">0</span> P</p>
             
             <input type="number" id="betAmount" placeholder="배팅 금액 입력">
             <p style="font-size: 12px; color: #aaaaaa;">(최소: 100 P / 최대: 500 P)</p>
@@ -58,6 +58,6 @@
         
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>
